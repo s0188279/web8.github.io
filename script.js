@@ -42,14 +42,14 @@ if (form) {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
-                    'Content-Type': 'application/json' // Добавлено для корректной отправки JSON
+                    'Content-Type': 'application/json' // для корректной отправки JSON
                 },
                 body: JSON.stringify(data)
             });
             if (response.ok) {
                 responseMessage.textContent = 'Форма успешно отправлена!';
                 clearForm();
-                saveFormData(data); // Возможно, стоит убрать это, если форма успешно отправлена
+                saveFormData(data); 
             } else {
                 throw new Error('Ошибка отправки формы');
             }
